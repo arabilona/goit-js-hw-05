@@ -1,8 +1,7 @@
-const getTotalBalanceByGender = (users, gender) => {
-  return users
+const getTotalBalanceByGender = (users, gender) =>
+  users
     .filter(user => user.gender === gender)
-    .reduce((totalBalance, user) => totalBalance + parseFloat(user.balance.replace('$', '').replace('',, '')), 0);
-};
+    .reduce((totalBalance, user) => totalBalance + user.balance, 0);
 
 
 
